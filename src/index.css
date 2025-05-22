@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+ @theme {
+   --color-border: hsl(var(--border)) ;
+   --color-background: hsl(var(--background)) ;
+   --color-foreground: hsl(var(--foreground)) ;
+
+   --color-primary: hsl(var(--primary)) ;
+   --color-primary-foreground: hsl(var(--primary-foreground)) ;
+    --color-secondary: hsl(var(--secondary)) ;
+
+    --color-card: hsl(var(--card)) ;
+
+    --animate-float: float 6 ease-in-out infinite;
+ }
+
+@layer base {
+
+  @font-face {
+    font-family: "circular-web";
+    src: url(./fonts/circularweb-book.woff2) format("woff2"),
+  }
+
+  @font-face {
+    font-family: "general";
+    src: url(./fonts/general.woff2) format("woff2"),
+  }
+
+  @font-face {
+    font-family: "robert-regular";
+    src: url(./fonts/robert-regular.woff2) format("woff2"),
+  }
+
+  @font-face {
+    font-family: "zentry-regular";
+    src: url(./fonts/zentry-regular.woff2) format("woff2"),
+  }
+
+
+  :root {
+    --border: 210 20% 95%;
+    --background: 210 90% 98%;
+    --foreground: 210 90% 10%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 100% 95%;
+    --card: 0 0% 100%;
+  }
+
+  .dark{
+    --border: 210 20% 30%;
+    --background: 210 20% 10%;
+    --foreground: 210 20% 90%;
+    --primary: 210 100% 50%;
+    --primary-foreground: hsl(var(--foreground));
+    --secondary: hsl(var(--primary));
+    --card: hsl(var(--background));
+  }
+
+  /* * {
+    @apply box-border;
+  } */
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-foreground;
+    font-family: 'circular-web', "general", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "rlig" 1, "clig" 1, "calt" 1;
+  }
+}
+
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+}
+
+@utility text-glow {
+  @apply relative;
+  text-shadow: 0 0 5px hsl(var(--foreground)), 0 0 10px hsl(var(--foreground));
+}
+
+@utility card-hover {
+  @apply transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
