@@ -1,7 +1,7 @@
 import { ThemeToggle } from "../components/ThemeToggle";
 import { NavBar } from "../components/NavBar";
 import { HeroSection } from "../components/HeroSection";
-import { Projects } from "../components/ProjectPage";
+import { ProjectPage } from "../components/ProjectPage";
 
 
 export const Home = () => {
@@ -19,7 +19,7 @@ export const Home = () => {
 
         <main>
             <HeroSection />
-            <Projects />
+            <ProjectPage />
         </main>
 
 
