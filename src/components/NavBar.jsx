@@ -28,14 +28,17 @@ export const NavBar = () => {
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300 backdrop-blur-md",
+        "fixed w-full z-40 transition-all duration-300",
         isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
-        <a href="#hero" className="text-2xl font-bold text-primary">
+        <a
+          className="text-xl font-bold text-primary flex items-center"
+          href="#hero"
+        >
           <span className="relative z-10">
-            <span className=" text-secondary"> JakobNieß</span>
+            <span className="text-glow text-foreground"> JakobNieß </span>{" "}
           </span>
         </a>
 
@@ -64,14 +67,14 @@ export const NavBar = () => {
 
         <div
           className={cn(
-            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex-col items-center justify-center",
+            "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
             "transition-all duration-300 md:hidden",
             isMobileMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
           )}
         >
-          <div className="flex flex-col space-y-8 text-xl h-full align-center justify-center">
+          <div className="flex flex-col space-y-8 text-xl">
             {navItems.map((item, key) => (
               <a
                 key={key}
