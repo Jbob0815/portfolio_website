@@ -15,13 +15,31 @@ const cardItems = [
     description: "This is a description of project 1",
     src: "src/assets/jwb_X_201909_03_r720P.mp4",
     video: "true",
-    className: "md:col-span-2 md:row-span-2",
+    className: "md:col-span-2 lg:row-span-2",
   },
   {
     title: "Project 2",
-    description: "This is a description of project 2",
+    description: "This is a description of project ",
     src: "src/assets/Screenshot.png",
-    className: " md:col-span-2 lg:col-span-3 row-span-1",
+    className: "lg:row-span-2",
+  },
+  {
+    title: "Project 3",
+    description: "This is a description of project ",
+    src: "src/assets/Screenshot.png",
+    className: " md:row-span-2 ",
+  },
+  {
+    title: "Project 4",
+    description: "This is a description of project ",
+    src: "src/assets/Screenshot.png",
+    className: " lg:col-span-2 ",
+  },
+  {
+    title: "Project 5",
+    description: "This is a description of project ",
+    src: "src/assets/Screenshot.png",
+    className: " md:col-span-2 ",
   },
 ];
 
@@ -47,9 +65,13 @@ const Card = ({ title, description, src, video }) => {
 
       <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
         <div>
-          <h1>{title}</h1>
+          <h1 className="text-2xl font-bold font-circular-web text-left ">
+            {title}
+          </h1>
           {description && (
-            <p className="mt-3 max-w-64 text-xs md:text-base">{description}</p>
+            <p className="mt-2 max-w-64 text-xs md:text-base text-left ">
+              {description}
+            </p>
           )}
         </div>
       </div>
@@ -98,30 +120,26 @@ const CardTilt = ({ children, className = "" }) => {
 
 export const ProjectPage = () => {
   return (
-    <section className="bg-black">
-      <div className="container mx-auto px-3 md:px-10">
+    <section className="bg-background pb-10">
+      <div className="container mx-auto px-3 md:px-10 ">
+        {/* Title */}
         <div className="px-5 py-32">
-          {/* <AnimatedTitle
-            title="Disc<b>o</b>ver the world's <br /> largest shared <b>a</b>dventure"
-            containerClass="mt-5 !text-black text-center"
-            /> */}
-
-          <h1 className="mt-5 font-circular-web font-extrabold text-4xl text-primary animation-appear">
+          <h1 className="mt-5 font-circular-web font-extrabold text-6xl text-secondary animation-appear">
             Projects
           </h1>
           <p className=" font-circular-web text-lg text-blue-50 opacity-50 text-center w-full">
             This i a collection of past things i have worked on.
           </p>
         </div>
-        <div className="grid h-[135vh] grid-cols-1 grid-rows-4 md:grid-cols-3 gap-7">
+        <div className="grid h-[135vh] grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 gap-7">
           {/* Map Cards */}
           {cardItems.map((items, id) => (
             <CardTilt
-              className={` ${items.className} size-full relative border-hsla col-span-1 overflow-hidden rounded-md `}
+              className={` ${items.className} size-full relative border-hsla col-span-1 overflow-hidden rounded-md  `}
               key={id}
             >
               <Card
-                className={`row-span-1 col-span-1 overflow-hidden rounded-md`}
+                className={`row-span-1 col-span-1 overflow-hidden rounded-md text-3xl text-left`}
                 title={items.title}
                 description={items.description}
                 src={items.src}
@@ -129,48 +147,6 @@ export const ProjectPage = () => {
               />
             </CardTilt>
           ))}
-
-          {/* 
-          <CardTilt className="row-span-1 col-span-1 md:col-span-2 md:row-span-2 overflow-hidden rounded-md">
-            <Card
-              title="Project 1"
-              description="This is a description of project 2"
-              src="src/assets/jwb_X_201909_03_r720P.mp4"
-              video
-            />
-          </CardTilt>
-
-          <CardTilt className="col-span-1 row-span-1 overflow-hidden rounded-md  ">
-            <Card
-              title="Project 2"
-              description="This is a description of project 1"
-              src="src/assets/Screenshot.png"
-            />
-          </CardTilt>
-
-          <CardTilt className="relative border-hsla col-span-1 md:row-span-2 overflow-hidden rounded-md ">
-            <Card
-              title="Project 3"
-              description="This is a description of project 1"
-              src="src/assets/Screenshot.png"
-            />
-          </CardTilt>
-
-          <CardTilt className="relative border-hsla  row-span-1 col-span-1 overflow-hidden rounded-md ">
-            <Card
-              title="Project 4"
-              description="This is a description of project 1"
-              src="src/assets/Screenshot.png"
-            />
-          </CardTilt>
-
-          <CardTilt className="relative border-hsla md:col-span-2 row-span-1 col-span-1 overflow-hidden rounded-md ">
-            <Card
-              title="Project 5"
-              description="This is a description of project 1"
-              src="src/assets/Screenshot.png"
-            />
-          </CardTilt> */}
         </div>
       </div>
     </section>

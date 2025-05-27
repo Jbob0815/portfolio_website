@@ -1,41 +1,39 @@
 @import "tailwindcss";
 
- @theme {
-   --color-border: hsl(var(--border)) ;
-   --color-background: hsl(var(--background)) ;
-   --color-foreground: hsl(var(--foreground)) ;
+@theme {
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
 
-   --color-primary: hsl(var(--primary)) ;
-   --color-primary-foreground: hsl(var(--primary-foreground)) ;
-    --color-secondary: hsl(var(--secondary)) ;
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
 
-    --color-card: hsl(var(--card)) ;
+  --color-card: hsl(var(--card));
 
-    --animate-float: float 6 ease-in-out infinite;
- }
+  --animate-float: float 6 ease-in-out infinite;
+}
 
 @layer base {
-
   @font-face {
     font-family: "circular-web";
-    src: url(./fonts/circularweb-book.woff2) format("woff2"),
+    src: url(./fonts/circularweb-book.woff2) format("woff2");
   }
 
   @font-face {
     font-family: "general";
-    src: url(./fonts/general.woff2) format("woff2"),
+    src: url(./fonts/general.woff2) format("woff2");
   }
 
   @font-face {
     font-family: "robert-regular";
-    src: url(./fonts/robert-regular.woff2) format("woff2"),
+    src: url(./fonts/robert-regular.woff2) format("woff2");
   }
 
   @font-face {
     font-family: "zentry-regular";
-    src: url(./fonts/zentry-regular.woff2) format("woff2"),
+    src: url(./fonts/zentry-regular.woff2) format("woff2");
   }
-
 
   :root {
     --border: 210 20% 95%;
@@ -47,7 +45,7 @@
     --card: 0 0% 100%;
   }
 
-  .dark{
+  .dark {
     --border: 210 20% 30%;
     --background: 210 20% 10%;
     --foreground: 210 20% 90%;
@@ -67,14 +65,13 @@
 
   body {
     @apply text-foreground;
-    font-family: 'circular-web', "general", sans-serif;
+    font-family: "circular-web", "general", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "rlig" 1, "clig" 1, "calt" 1;
   }
-
 }
 
 @keyframes appear {
@@ -88,69 +85,66 @@
   }
 }
 
-@keyframes role-change{
-  10%{
+@keyframes role-change {
+  10% {
     transform: translateY(-102%);
   }
-  20%{
+  20% {
     transform: translateY(-100%);
   }
-  30%{
+  30% {
     transform: translateY(-202%);
   }
-  40%{
+  40% {
     transform: translateY(-200%);
   }
-  50%{
+  50% {
     transform: translateY(-302%);
   }
-  60%{
+  60% {
     transform: translateY(-300%);
   }
-  70%{
+  70% {
     transform: translateY(-402%);
   }
-  80%{
+  80% {
     transform: translateY(-400%);
   }
-  90%{
+  90% {
     transform: translateY(-502%);
   }
-  100%{
+  100% {
     transform: translateY(-500%);
   }
 }
 
 .text-changer {
   height: 5rem;
-  padding: 10px ;
+  padding: 10px;
   border-radius: 8px;
   display: flex;
   color: hsl(var(--foreground));
   font-family: circular-web, "general", sans-serif;
   font-weight: 500;
-  /* font-size: 25px; */
   box-sizing: content-box;
-} 
-
+}
 
 .intro-text {
- margin-top: -2px;
+  margin-top: -2px;
 }
 
 .roles-container {
-  position:  relative;
+  position: relative;
   overflow: hidden;
   height: 5rem;
 }
 
-.role{
-  display :block;
+.role {
+  display: block;
   height: 100%;
-  padding-left:6px;
+  padding-left: 6px;
   animation: role-change 15s ease infinite;
 }
-
 
 @utility animation-appear {
   animation: appear 0.5s linear;
@@ -182,4 +176,3 @@
   padding: 0;
   text-align: center;
 }
-

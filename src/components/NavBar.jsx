@@ -28,14 +28,14 @@ export const NavBar = () => {
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
+        "fixed w-full z-40 transition-all duration-300 backdrop-blur-md",
         isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
         <a href="#hero" className="text-2xl font-bold text-primary">
           <span className="relative z-10">
-            <span className=" text-primary"> JakobNieß</span>
+            <span className=" text-secondary"> JakobNieß</span>
           </span>
         </a>
 
@@ -52,6 +52,7 @@ export const NavBar = () => {
             </a>
           ))}
         </div>
+
         {/*Mobile */}
 
         <button
