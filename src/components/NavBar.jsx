@@ -26,71 +26,76 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
-      <div className="container flex items-center justify-between">
-        <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground"> JakobNieß </span>{" "}
-          </span>
-        </a>
+    <div className="flex justify-center w-full">
+      <nav
+        className={cn(
+          "fixed w-full py-4 z-40 transition-all duration-300  top-0 max-w-7xl border-white/50 margin-x-auto ",
+          "md:py-2 md:border-2 md:top-5 md:rounded-lg md:backdrop-blur-[4px] md:bg-black/25"
+        )}
+      >
+        <div className="container flex items-center justify-between">
+          <a
+            className="text-xl font-bold text-primary flex items-center"
+            href="#hero"
+          >
+            <span className="relative z-10">
+              <span className="text-foreground"> JakobNieß </span>{" "}
+            </span>
+          </a>
 
-        {/*Desktop */}
+          {/*Desktop */}
 
-        <div className="hidden md:flex gap-8 space-x-8">
-          {navItems.map((item, key) => (
-            <a
-              key={key}
-              href={item.href}
-              className="text-secondary hover:text-primary transition-color duration-300 "
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
-
-        {/*Mobile */}
-
-        <button
-          className="md:hidden p2 z-50"
-          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu />}
-        </button>
-
-        <div
-          className={cn(
-            "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
-            "transition-all duration-300 md:hidden",
-            isMobileMenuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          )}
-        >
-          <div className="flex flex-col space-y-8 text-xl">
+          <div className="hidden md:flex gap-8 space-x-8">
             {navItems.map((item, key) => (
               <a
                 key={key}
                 href={item.href}
-                className="text-secondary hover:text-primary transition-color duration-300 "
-                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-black font-bold hover:text-primary transition-color duration-300 dark:text-white"
               >
                 {item.name}
               </a>
             ))}
           </div>
+
+          {/*Mobile */}
+
+          <button
+            className="md:hidden p2 z-50"
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu />}
+          </button>
+
+          <div
+            className={cn(
+              "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
+              "transition-all duration-300 md:hidden",
+              isMobileMenuOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            )}
+          >
+            <div className="flex flex-col space-y-8 text-xl">
+              {navItems.map((item, key) => (
+                <a
+                  key={key}
+                  href={item.href}
+                  className="text-secondary hover:text-primary transition-color duration-300 "
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          <a
+            href="https://github.com/Jbob0815"
+            className="hidden md:flex hover:text-primary transition-color duration-300 pointer-events-auto"
+          >
+            <Github />
+          </a>
         </div>
-        <div className="hidden md:flex ">
-          <Github />
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
