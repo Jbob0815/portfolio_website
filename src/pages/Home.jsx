@@ -3,7 +3,7 @@ import { NavBar } from "../components/NavBar";
 import { HeroSection } from "../components/HeroSection";
 import { ProjectPage } from "../components/ProjectPage";
 import { Footer } from "../components/Footer";
-import { About } from "../components/about";
+import { About } from "../components/About";
 import { Contact } from "../components/Contact";
 
 export const Home = () => {
