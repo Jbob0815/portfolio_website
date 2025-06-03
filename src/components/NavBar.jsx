@@ -29,7 +29,7 @@ export const NavBar = () => {
     <div className="flex justify-center w-full">
       <nav
         className={cn(
-          "fixed w-full py-4 z-40 transition-all duration-300  top-0 max-w-7xl border-white/50 margin-x-auto ",
+          "fixed w-full py-4 z-40 transition-all duration-300 top-0 max-w-7xl border-white/50 margin-x-auto",
           "md:py-2 md:border-2 md:top-5 md:rounded-lg md:backdrop-blur-[4px] md:bg-black/25"
         )}
       >
@@ -39,7 +39,7 @@ export const NavBar = () => {
             href="#hero"
           >
             <span className="relative z-10">
-              <span className="text-foreground"> JakobNieß </span>{" "}
+              <span className="text-primary"> JakobNieß </span>{" "}
             </span>
           </a>
 
@@ -50,7 +50,7 @@ export const NavBar = () => {
               <a
                 key={key}
                 href={item.href}
-                className="text-black font-bold hover:text-primary transition-color duration-300 dark:text-white"
+                className="text-text font-bold hover:text-primary transition-color duration-300 dark:text-white"
               >
                 {item.name}
               </a>
@@ -80,7 +80,7 @@ export const NavBar = () => {
                 <a
                   key={key}
                   href={item.href}
-                  className="text-secondary hover:text-primary transition-color duration-300 "
+                  className="text-text hover:text-primary transition-color duration-300 "
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -90,7 +90,7 @@ export const NavBar = () => {
           </div>
           <a
             href="https://github.com/Jbob0815"
-            className="hidden md:flex hover:text-primary transition-color duration-300 pointer-events-auto"
+            className="hidden text-text md:flex hover:text-primary transition-color duration-300 pointer-events-auto"
           >
             <Github />
           </a>

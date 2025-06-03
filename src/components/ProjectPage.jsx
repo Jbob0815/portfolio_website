@@ -124,10 +124,10 @@ export const ProjectPage = () => {
       <div className="container mx-auto px-3 md:px-10 ">
         {/* Title */}
         <div className="px-5 py-32">
-          <h1 className="mt-5 font-circular-web font-extrabold text-6xl text-secondary animation-appear">
+          <h1 className="mt-5 font-circular-web font-extrabold text-6xl text-primary animation-appear">
             Projects
           </h1>
-          <p className=" font-circular-web text-lg text-blue-50 opacity-50 text-center w-full">
+          <p className=" font-circular-web text-lg text-text-light text-center w-full">
             This i a collection of past things i have worked on.
           </p>
         </div>

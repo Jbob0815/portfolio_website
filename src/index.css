@@ -10,7 +10,8 @@
   --color-secondary: hsl(var(--secondary));
 
   --color-card: hsl(var(--card));
-
+  --color-text: hsl(var(--text));
+  --color-text-light: hsl(var(--text-light));
   --animate-float: float 6 ease-in-out infinite;
 }
 
@@ -36,22 +37,22 @@
   }
 
   :root {
-    --border: 210 20% 95%;
+    --primary: 47, 100%, 50%;
+    --secondary: 207, 82%, 98%;
     --background: 210 90% 98%;
-    --foreground: 210 90% 10%;
-    --primary: 207, 82%, 98%;
-    --secondary: 199, 64%, 73%;
-    --primary-foreground: 210 100% 95%;
+    --text: 211, 29%, 25%;
+    --text-light: 211, 15%, 43%;
+    --border: 210 20% 95%;
     --card: 0 0% 100%;
   }
 
   .dark {
-    --border: 210 20% 30%;
     --background: 210 20% 10%;
-    --foreground: 210 20% 90%;
-    --primary: 210 100% 50%;
-    --primary-foreground: hsl(var(--foreground));
-    --secondary: hsl(var(--primary));
+    --text: 210 20% 90%;
+    --text: 210 20% 90%;
+    --primary: 249, 66%, 62%;
+    --secondary: 247, 100%, 96%;
+    --border: 210 20% 30%;
     --card: hsl(var(--background));
   }
 

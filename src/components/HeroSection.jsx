@@ -66,12 +66,12 @@ export const HeroSection = () => {
         />
 
         <div className=" flex-col absolute left-5 bottom-5 ">
-          <p className="intro-text text-3xl text-left"> I am a</p>
+          <p className="intro-text text-text text-3xl text-left"> I am a</p>
           <div className="roles-container">
             {roles.map((role, i) => (
               <span
                 key={i}
-                className="role text-3xl md:text-6xl text-nowrap font-bold text-secondary h-[5rem] text-left max-w-screen overflow-hidden"
+                className="role text-3xl md:text-6xl text-nowrap font-bold text-primary h-[5rem] text-left max-w-screen overflow-hidden"
               >
                 {role}
               </span>
@@ -79,7 +79,9 @@ export const HeroSection = () => {
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex flex-col items-center animate-bounce">
-          <span className="text-sm text-muted-foreground mb-2">Scroll</span>
+          <span className="text-sm text-white text-muted-foreground mb-2">
+            Scroll
+          </span>
           <ArrowDown className="h-5 w-5 text-secondary" />
         </div>
       </div>
