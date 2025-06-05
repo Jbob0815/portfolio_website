@@ -61,7 +61,7 @@ export const HeroSection = () => {
           autoPlay
           loop
           muted
-          src="src/assets/jwb_X_201909_03_r720P.mp4"
+          src="src/assets/GameCubeAnimation.mov"
           className="absolute left-0 top-0 size-full object-cover object-center"
         />
 

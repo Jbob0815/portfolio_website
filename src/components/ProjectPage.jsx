@@ -18,7 +18,7 @@ const cardItems = [
     className: "md:col-span-2 lg:row-span-2 text-text",
   },
   {
-    title: "CleanEck.de",
+    title: "clean-eck.de",
     description: "Basic Website for a cleaning company",
     src: "src/assets/CleanEck.png",
     className: "lg:row-span-2 text-black cursor-pointer",
@@ -152,7 +152,7 @@ const CardTilt = ({ children, className = "" }) => {
 
 export const ProjectPage = () => {
   return (
-    <section className="bg-background pb-10">
+    <section className="bg-background pb-10" id="projects">
       <div className="container mx-auto px-3 md:px-10 ">
         {/* Title */}
         <div className="px-5 py-32">
