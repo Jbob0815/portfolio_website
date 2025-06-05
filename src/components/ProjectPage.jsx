@@ -13,15 +13,16 @@ const cardItems = [
   {
     title: "Project 1",
     description: "This is a description of project 1",
-    src: "src/assets/jwb_X_201909_03_r720P.mp4",
-    video: "true",
-    className: "md:col-span-2 lg:row-span-2",
+    src: "src/assets/GameCubeAnimation.mov",
+    video: true,
+    className: "md:col-span-2 lg:row-span-2 text-text",
   },
   {
-    title: "Project 2",
-    description: "This is a description of project ",
-    src: "src/assets/Screenshot.png",
-    className: "lg:row-span-2",
+    title: "CleanEck.de",
+    description: "Basic Website for a cleaning company",
+    src: "src/assets/CleanEck.png",
+    className: "lg:row-span-2 text-black cursor-pointer",
+    href: "https://clean-eck.de",
   },
   {
     title: "Project 3",
@@ -39,17 +40,48 @@ const cardItems = [
     title: "Project 5",
     description: "This is a description of project ",
     src: "src/assets/Screenshot.png",
-    className: " md:col-span-2 ",
+    className: " md:col-span-2",
   },
 ];
 
-const Card = ({ title, description, src, video }) => {
+const Card = ({ title, description, src, video, href }) => {
+  const videoRef = useRef(null);
+
+  // Play video on mouse enter
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
+  // Reverse video on mouse leave
+  const handleMouseLeave = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
+  // Open href in new tab if present
+  const handleClick = () => {
+    if (href) {
+      window.open(href, "_blank");
+    }
+  };
+
   return (
-    <div className="relative size-full ">
+    <div
+      className={`relative size-full border-border${
+        href ? " cursor-pointer" : ""
+      }`}
+      onMouseEnter={video ? handleMouseEnter : undefined}
+      onMouseLeave={video ? handleMouseLeave : undefined}
+      onClick={href ? handleClick : undefined}
+    >
       {video ? (
         <video
-          autoPlay
-          loop
+          ref={videoRef}
+          loop={false}
           muted
           src={src}
           alt="video"
@@ -63,7 +95,7 @@ const Card = ({ title, description, src, video }) => {
         />
       )}
 
-      <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
+      <div className="relative z-10 flex size-full flex-col justify-between p-5">
         <div>
           <h1 className="text-2xl font-bold font-circular-web text-left ">
             {title}
@@ -108,7 +140,7 @@ const CardTilt = ({ children, className = "" }) => {
       ref={itemRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={"" + className}
+      className={"pointer-events-auto" + className}
       style={{
         transform: transformStyle,
       }}
@@ -135,11 +167,11 @@ export const ProjectPage = () => {
           {/* Map Cards */}
           {cardItems.map((items, id) => (
             <CardTilt
-              className={` ${items.className} size-full relative border-hsla col-span-1 overflow-hidden rounded-md  `}
+              className={` ${items.className} size-full relative border-hsla col-span-1 overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-color `}
               key={id}
             >
               <Card
-                className={`row-span-1 col-span-1 overflow-hidden rounded-md text-3xl text-left`}
+                className={`row-span-1 col-span-1 overflow-hidden text-3xl text-left + ${items.className}`}
                 title={items.title}
                 description={items.description}
                 src={items.src}

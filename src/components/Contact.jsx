@@ -20,7 +20,7 @@ export const Contact = () => {
           <div className="h-auto shadow-lg p-6 bg-card rounded-lg w-[min(90vw,30rem)] ">
             <h2 className="text-2xl text-text font-bold mb-4 mt-1">My Info</h2>
           </div>
-          <div className="bg-card dark:bg-grey shadow-lg rounded-lg p-6 h-auto w-[min(90vw,30rem)]">
+          <div className="bg-card shadow-lg rounded-lg p-6 h-auto w-[min(90vw,30rem)]">
             <h2 className="text-2xl text-text font-bold mb-4">Contact Me</h2>
             <form className="text-left">
               <div className="mb-4">

@@ -90,7 +90,7 @@ export const NavBar = () => {
           </div>
           <a
             href="https://github.com/Jbob0815"
-            className="hidden text-text md:flex hover:text-primary transition-color duration-300 pointer-events-auto"
+            className="hidden text-text md:flex hover:text-primary transition-color duration-300 cursor-pointer"
           >
             <Github />
           </a>

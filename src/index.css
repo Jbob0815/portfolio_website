@@ -53,7 +53,7 @@
     --primary: 249, 66%, 62%;
     --secondary: 247, 100%, 96%;
     --border: 210 20% 30%;
-    --card: hsl(var(--background));
+    --card: 210 20% 13%;
   }
 
   /* * {

@@ -14,53 +14,24 @@ export const About = () => {
     "creativity",
     "leadership",
   ];
-  const containerRef = useRef(null);
 
   const [activeIdx, setActiveIdx] = useState(0);
 
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const idx = parseInt(
-              entry.target.getAttribute("data-idx") || "0",
-              10
-            );
-            setActiveIdx(idx);
-          }
-        });
-      },
-      {
-        root: container,
-        rootMargin: "-50% 0px -50% 0px",
-        threshold: 0,
-      }
-    );
-
-    const elements = container.querySelectorAll("[data-idx]");
-    elements.forEach((el) => observer.observe(el));
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
   return (
-    <section className="bg-background h-[200vh] relative " id="about">
-      <div
-        ref={containerRef}
-        className="
-        h-screen
-        overflow-y-auto
-        py-40
-        snap-y snap-mandatory
-        scroll-smooth
-      "
-      >
+    <section
+      className="bg-background w-full min-h-screen relative flex flex-row items-center px-5 justify-center"
+      id="about"
+    >
+      <div className="relative w-full flex flex-col items-center justify-center">
+        <h2 className="text-2xl font bold text-text ">About Me</h2>
+        <p className="text-text-light text-lg ">
+          Text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Consequuntur repudiandae quaerat voluptas. Veniam, asperiores
+          recusandae nihil, laudantium blanditiis aliquid dolor saepe nulla sed
+          soluta quia! Praesentium aperiam earum aliquam? Est.
+        </p>
+      </div>
+      <div className="w-full  item-center justify-center sticky top-[calc(100vh/2)] translate-y-[-50%]">
         {items.map((txt, i) => (
           <div
             key={i}
