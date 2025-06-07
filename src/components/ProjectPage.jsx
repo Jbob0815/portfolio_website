@@ -11,18 +11,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cardItems = [
   {
-    title: "Project 1",
-    description: "This is a description of project 1",
+    title: "BlueCube Mod Modification",
+    description: "Updated GameCube Controller Mod to USB-C",
     src: "src/assets/GameCubeAnimation.mov",
     video: true,
-    className: "md:col-span-2 lg:row-span-2 text-text",
+    className: "md:col-span-2 lg:row-span-2 text-white",
   },
   {
-    title: "clean-eck.de",
-    description: "Basic Website for a cleaning company",
-    src: "src/assets/CleanEck.png",
-    className: "lg:row-span-2 text-black cursor-pointer",
-    href: "https://clean-eck.de",
+    title: "Project 2 ",
+    description: "This is a description of project ",
+    src: "src/assets/Screenshot.png",
+    className: " lg:row-span-2 ",
   },
   {
     title: "Project 3",
@@ -31,20 +30,25 @@ const cardItems = [
     className: " md:row-span-2 ",
   },
   {
-    title: "Project 4",
-    description: "This is a description of project ",
-    src: "src/assets/Screenshot.png",
-    className: " lg:col-span-2 ",
+    title: "clean-eck.de",
+    description: "Basic Website for a cleaning company",
+    src: "src/assets/CleanEck.png",
+    className: "lg:col-span-2 text-black ",
+    button: "https://clean-eck.de",
   },
   {
     title: "Project 5",
-    description: "This is a description of project ",
     src: "src/assets/Screenshot.png",
-    className: " md:col-span-2",
+    className: " bg-primary text-white",
+  },
+  {
+    title: " More Coming Soon",
+    src: null,
+    className: " bg-primary text-white text-xl",
   },
 ];
 
-const Card = ({ title, description, src, video, href }) => {
+const Card = ({ title, description, src, video, button }) => {
   const videoRef = useRef(null);
 
   // Play video on mouse enter
@@ -71,12 +75,9 @@ const Card = ({ title, description, src, video, href }) => {
 
   return (
     <div
-      className={`relative size-full border-border${
-        href ? " cursor-pointer" : ""
-      }`}
+      className={`relative size-full border-border`}
       onMouseEnter={video ? handleMouseEnter : undefined}
       onMouseLeave={video ? handleMouseLeave : undefined}
-      onClick={href ? handleClick : undefined}
     >
       {video ? (
         <video
@@ -105,6 +106,16 @@ const Card = ({ title, description, src, video, href }) => {
               {description}
             </p>
           )}
+          {button && (
+            <a
+              href={button}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-block absolute px-4 py-2 bg-primary text-white rounded-md bottom-5 right-5 transition-colors"
+            >
+              Learn More
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -124,8 +135,8 @@ const CardTilt = ({ children, className = "" }) => {
     const relativeX = (event.clientX - left) / width;
     const relativeY = (event.clientY - top) / height;
 
-    const tiltX = (relativeY - 0.5) * 6;
-    const tiltY = (relativeX - 0.5) * -6;
+    const tiltX = (relativeY - 0.5) * 4;
+    const tiltY = (relativeX - 0.5) * -4;
 
     const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(.98, .98, .98)`;
     setTransformStyle(newTransform);
@@ -153,6 +164,7 @@ const CardTilt = ({ children, className = "" }) => {
 export const ProjectPage = () => {
   return (
     <section className="bg-background pb-10" id="projects">
+      {/* Title Section */}
       <div className="container mx-auto px-3 md:px-10 ">
         {/* Title */}
         <div className="px-5 py-32">
@@ -176,6 +188,7 @@ export const ProjectPage = () => {
                 description={items.description}
                 src={items.src}
                 {...(items.video ? { video: true } : {})}
+                button={items.button}
               />
             </CardTilt>
           ))}
