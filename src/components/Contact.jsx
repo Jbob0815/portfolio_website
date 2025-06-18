@@ -1,11 +1,11 @@
 import React from "react";
-import { Mail, Map, Phone } from "lucide-react";
+import { Mail, Map, Phone, CircleUserRound } from "lucide-react";
 
 const info = [
-  { title: "Email", content: "Schleswig-Holstein, Germany", icon: <Map /> },
-  { title: "Email", content: "contact@jakobnieß.de", icon: <Mail /> },
-  { title: "Email", content: "+49 176 42012290 ", icon: <Phone /> },
-  { title: "Email", content: "", icon: <Mail /> },
+  { content: "Jakob Nieß", icon: <CircleUserRound /> },
+  { content: "+49 176 42012290 ", icon: <Phone /> },
+  { content: "contact@example.com", icon: <Mail /> },
+  { content: "Schleswig-Holstein, Germany", icon: <Map /> },
 ];
 export const Contact = () => {
   return (
@@ -14,7 +14,7 @@ export const Contact = () => {
         id="contact"
         className="min-h-screen flex flex-col items-center justify-center bg-background p-6"
       >
-        <div className="px-5 py-32">
+        <div className="px-5 py-15">
           <h1 className="mt-5 font-circular-web font-extrabold text-6xl text-primary animation-appear">
             Contact
           </h1>
@@ -27,18 +27,16 @@ export const Contact = () => {
           <div className="h-auto shadow-lg p-6 px-8 bg-card rounded-lg w-[min(90vw,30rem)] ">
             <h2 className="text-2xl text-text font-bold mb-6 mt-1">My Info</h2>
             {info.map((item, index) => (
-              <div key={index} className="flex items-center mb-4 text-text">
+              <div key={index} className="flex items-center mb-4">
                 <div className="text-primary mr-3">{item.icon}</div>
                 <div>
-                  <p className="text-sm text-text-light dark:text-text">
-                    {item.content}
-                  </p>
+                  <p className="text-sm text-text-light ">{item.content}</p>
                 </div>
               </div>
             ))}
             <div className="mt-6 py-4 border-t border-border text-left">
               <h2 className="text-text font-bold text-lg">Something</h2>
-              <p className="text-text-light text-sm mt-2">
+              <p className="text-text-light text-sm mt-2 leading-relaxed">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
                 ratione neque quia dolore earum atque dignissimos quaerat
                 facilis nemo, in ex, excepturi fuga error? Possimus recusandae

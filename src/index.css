@@ -49,7 +49,7 @@
   .dark {
     --background: 210 20% 10%;
     --text: 210 20% 90%;
-    --text: 210 20% 90%;
+    --text-light: 211, 15%, 55%;
     --primary: 249, 66%, 62%;
     --secondary: 247, 100%, 96%;
     --border: 210 20% 30%;

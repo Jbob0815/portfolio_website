@@ -37,13 +37,8 @@ const cardItems = [
     button: "https://clean-eck.de",
   },
   {
-    title: "Project 5",
-    src: "src/assets/Screenshot.png",
-    className: " bg-primary text-white",
-  },
-  {
     title: " More Coming Soon",
-    src: null,
+    src: "src/assets/Rocket.svg",
     className: " bg-primary text-white text-xl",
   },
 ];

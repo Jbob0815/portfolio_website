@@ -8,7 +8,7 @@ import { Contact } from "../components/Contact";
 
 export const Home = () => {
   return (
-    <div className="min-h-screen  font-zentry-regular">
+    <div className="min-h-screen bg-background  font-zentry-regular">
       {/*Theme Toogle*/}
       <ThemeToggle />
 
