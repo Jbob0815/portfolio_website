@@ -59,9 +59,9 @@ export const HeroSection = () => {
         <video
           id="current-video"
           autoPlay
-          // loop
+          loop
           muted
-          src="src/assets/GameCubeAnimation.mov"
+          src="src/assets/CarRacing.mov"
           className="absolute left-0 top-0 size-full object-cover object-center"
         />
 

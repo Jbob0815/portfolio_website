@@ -18,10 +18,11 @@ const cardItems = [
     className: "md:col-span-2 lg:row-span-2 text-white",
   },
   {
-    title: "Project 2 ",
-    description: "This is a description of project ",
-    src: "src/assets/Screenshot.png",
+    title: "clean-eck.de",
+    description: "Basic Website for a cleaning company",
+    src: "src/assets/CleanEck.png",
     className: " lg:row-span-2 ",
+    button: "https://clean-eck.de",
   },
   {
     title: "Project 3",
@@ -30,11 +31,11 @@ const cardItems = [
     className: " md:row-span-2 ",
   },
   {
-    title: "clean-eck.de",
-    description: "Basic Website for a cleaning company",
-    src: "src/assets/CleanEck.png",
-    className: "lg:col-span-2 text-black ",
-    button: "https://clean-eck.de",
+    title: "First Game at 14",
+    description: "My First small Racing Simulator",
+    src: "src/assets/CarRacing.mov",
+    video: true,
+    className: "lg:col-span-2 text-white ",
   },
   {
     title: " More Coming Soon",
