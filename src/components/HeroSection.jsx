@@ -63,8 +63,11 @@ export const HeroSection = () => {
           muted
           src="assets/CarRacing.mov"
           className="absolute left-0 top-0 size-full object-cover object-center"
+          playsInline // prevents iOS fullscreen on play
+          disablePictureInPicture // disables PiP on supported browsers
+          controls={false} // explicitly disables controls
         />
-
+        />
         <div className=" flex-col absolute left-5 bottom-5 ">
           <p className="intro-text text-white text-3xl text-left"> I am a</p>
           <div className="roles-container">
