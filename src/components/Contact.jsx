@@ -1,6 +1,17 @@
 import React from "react";
 import { Mail, Map, Phone, CircleUserRound } from "lucide-react";
 
+import { Resend } from "resend";
+
+const resend = new Resend("re_Gif4QUVG_7tz5Z4ra8qxhKEnXxgmYyJAQ");
+
+resend.emails.send({
+  from: "onboarding@resend.dev",
+  to: "gonhill123@gmail.com",
+  subject: "Hello World",
+  html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+});
+
 const info = [
   { content: "Jakob Nieß", icon: <CircleUserRound /> },
   { content: "+49 176 42012290 ", icon: <Phone /> },
