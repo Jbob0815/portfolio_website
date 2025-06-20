@@ -13,33 +13,33 @@ const cardItems = [
   {
     title: "BlueCube Mod Modification",
     description: "Updated GameCube Controller Mod to USB-C",
-    src: "src/assets/GameCubeAnimation.mov",
+    src: "/assets/GameCubeAnimation.mov",
     video: true,
     className: "md:col-span-2 lg:row-span-2 text-white",
   },
   {
     title: "clean-eck.de",
     description: "Basic Website for a cleaning company",
-    src: "src/assets/CleanEck.png",
+    src: "/assets/CleanEck.png",
     className: " lg:row-span-2 ",
     button: "https://clean-eck.de",
   },
   {
     title: "Project 3",
     description: "This is a description of project ",
-    src: "src/assets/Screenshot.png",
+    src: "/assets/Screenshot.png",
     className: " md:row-span-2 ",
   },
   {
     title: "First Game at 14",
     description: "My First small Racing Simulator",
-    src: "src/assets/CarRacing.mov",
+    src: "/assets/CarRacing.mov",
     video: true,
     className: "lg:col-span-2 text-white ",
   },
   {
     title: " More Coming Soon",
-    src: "src/assets/Rocket.svg",
+    src: "/assets/Rocket.svg",
     className: " bg-primary text-white text-xl",
   },
 ];
