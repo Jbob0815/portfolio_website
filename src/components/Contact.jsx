@@ -5,12 +5,12 @@ import { Resend } from "resend";
 
 const resend = new Resend("re_Gif4QUVG_7tz5Z4ra8qxhKEnXxgmYyJAQ");
 
-resend.emails.send({
-  from: "onboarding@resend.dev",
-  to: "gonhill123@gmail.com",
-  subject: "Hello World",
-  html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
-});
+// resend.emails.send({
+//   from: "onboarding@resend.dev",
+//   to: "gonhill123@gmail.com",
+//   subject: "Hello World",
+//   html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+// });
 
 const info = [
   { content: "Jakob Nieß", icon: <CircleUserRound /> },
