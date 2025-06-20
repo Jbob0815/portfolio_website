@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { Mail, Map, Phone, CircleUserRound } from "lucide-react";
-
 import { Resend } from "resend";
 
 const resend = new Resend("re_Gif4QUVG_7tz5Z4ra8qxhKEnXxgmYyJAQ");
@@ -18,7 +17,32 @@ const info = [
   { content: "contact@example.com", icon: <Mail /> },
   { content: "Schleswig-Holstein, Germany", icon: <Map /> },
 ];
+
 export const Contact = () => {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+    try {
+      await resend.emails.send({
+        from: "onboarding@resend.dev",
+        to: "gonhill123@gmail.com",
+        subject: `Contact from ${form.name} (${form.email})`,
+        html: `<p>${form.message}</p>`,
+      });
+      setStatus("Message sent!");
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      setStatus("Failed to send message.");
+    }
+  };
+
   return (
     <div>
       <section
@@ -30,8 +54,8 @@ export const Contact = () => {
             Contact
           </h1>
           <p className=" font-circular-web text-lg text-text-light text-center w-full">
-            Here are some ways you can reach out to me.<br></br> I look forward
-            to hearing from you!
+            Here are some ways you can reach out to me.
+            <br /> I look forward to hearing from you!
           </p>
         </div>
         <div className="flex flex-col lg:flex-row gap-5">
@@ -57,7 +81,7 @@ export const Contact = () => {
           </div>
           <div className="bg-card shadow-lg rounded-lg p-6 h-auto w-[min(90vw,30rem)]">
             <h2 className="text-2xl text-text font-bold mb-4">Get in Touch</h2>
-            <form className="text-left">
+            <form className="text-left" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
                   className="block text-sm font-medium text-text mb-2"
@@ -72,6 +96,8 @@ export const Contact = () => {
                   className="w-full text-text px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Your Name"
                   required
+                  value={form.name}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-4">
@@ -88,6 +114,8 @@ export const Contact = () => {
                   className="w-full text-text px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Your Email"
                   required
+                  value={form.email}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-4">
@@ -104,6 +132,8 @@ export const Contact = () => {
                   className="w-full text-text px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Your Message..."
                   required
+                  value={form.message}
+                  onChange={handleChange}
                 ></textarea>
               </div>
               <button
@@ -112,6 +142,9 @@ export const Contact = () => {
               >
                 Send Message
               </button>
+              {status && (
+                <p className="mt-2 text-sm text-text-light">{status}</p>
+              )}
             </form>
           </div>
         </div>
