@@ -179,7 +179,7 @@ export const ProjectPage = () => {
               key={id}
             >
               <Card
-                className={`row-span-1 col-span-1 overflow-hidden text-3xl text-left + ${items.className}`}
+                className={`row-span-1 col-span-1 overflow-hidden text-3xl text-left transition-color duration-300  + ${items.className}`}
                 title={items.title}
                 description={items.description}
                 src={items.src}

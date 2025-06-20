@@ -61,12 +61,12 @@ export const HeroSection = () => {
           autoPlay
           loop
           muted
-          src="src/assets/CarRacing.mov"
+          src="assets/CarRacing.mov"
           className="absolute left-0 top-0 size-full object-cover object-center"
         />
 
         <div className=" flex-col absolute left-5 bottom-5 ">
-          <p className="intro-text text-text text-3xl text-left"> I am a</p>
+          <p className="intro-text text-white text-3xl text-left"> I am a</p>
           <div className="roles-container">
             {roles.map((role, i) => (
               <span
