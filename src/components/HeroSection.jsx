@@ -67,7 +67,6 @@ export const HeroSection = () => {
           disablePictureInPicture // disables PiP on supported browsers
           controls={false} // explicitly disables controls
         />
-        />
         <div className=" flex-col absolute left-5 bottom-5 ">
           <p className="intro-text text-white text-3xl text-left"> I am a</p>
           <div className="roles-container">
