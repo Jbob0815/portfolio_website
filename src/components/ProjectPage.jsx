@@ -25,10 +25,10 @@ const cardItems = [
     button: "https://clean-eck.de",
   },
   {
-    title: "Project 3",
-    description: "This is a description of project ",
-    src: "/assets/Screenshot.png",
-    className: " md:row-span-2 ",
+    title: "Photogrametry Projects",
+    description: "Scanned Some Objects via Photogrametry",
+    src: "/assets/BaumStamm.png",
+    className: " md:row-span-2  text-white",
   },
   {
     title: "First Game at 14",
@@ -69,6 +69,8 @@ const Card = ({ title, description, src, video, button }) => {
     }
   };
 
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
   return (
     <div
       className={`relative size-full border-border`}
@@ -83,6 +85,9 @@ const Card = ({ title, description, src, video, button }) => {
           src={src}
           alt="video"
           className="absolute left-0 top-0 size-full object-cover object-center"
+          playsInline // prevents iOS fullscreen on play
+          disablePictureInPicture // disables PiP on supported browsers
+          controls={false} // explicitly disables controls
         />
       ) : (
         <img

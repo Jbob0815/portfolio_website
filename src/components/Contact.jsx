@@ -111,7 +111,7 @@ export const Contact = () => {
                 disabled
                 className="w-full bg-primary text-white py-2 rounded-md hover:bg-secondary transition-colors duration-300"
               >
-                Under Construction
+                Still workimg on it...
               </button>
             </form>
           </div>
