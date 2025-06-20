@@ -173,7 +173,7 @@ export const ProjectPage = () => {
             Projects
           </h1>
           <p className=" font-circular-web text-lg text-text-light text-center w-full">
-            This i a collection of past things i have worked on.
+            Here are some of my Projects i have worked on.
           </p>
         </div>
         <div className="grid h-[135vh] grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 gap-7">

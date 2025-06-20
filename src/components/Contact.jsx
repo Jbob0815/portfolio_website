@@ -15,7 +15,7 @@ resend.emails.send({
 const info = [
   { content: "Jakob Nieß", icon: <CircleUserRound /> },
   { content: "+49 176 42012290 ", icon: <Phone /> },
-  { content: "contact@example.com", icon: <Mail /> },
+  { content: "jakob.niess2704@gmail.com", icon: <Mail /> },
   { content: "Schleswig-Holstein, Germany", icon: <Map /> },
 ];
 export const Contact = () => {
@@ -46,12 +46,11 @@ export const Contact = () => {
               </div>
             ))}
             <div className="mt-6 py-4 border-t border-border text-left">
-              <h2 className="text-text font-bold text-lg">Something</h2>
+              <h2 className="text-text font-bold text-lg">Contact Details</h2>
               <p className="text-text-light text-sm mt-2 leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                ratione neque quia dolore earum atque dignissimos quaerat
-                facilis nemo, in ex, excepturi fuga error? Possimus recusandae
-                natus cupiditate veritatis delectus!
+                Feel free to reach out via email or phone for any inquiries,
+                collaborations, or just to say hello. I aim to respond as soon
+                as possible!
               </p>
             </div>
           </div>
