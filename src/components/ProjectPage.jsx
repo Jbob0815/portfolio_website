@@ -38,9 +38,16 @@ const cardItems = [
     className: "lg:col-span-2 text-white ",
   },
   {
+    title: " Arduino Battleships",
+    description: "A Battleship Game with Arduino in Wokwi",
+    src: "assets/wokwi-project.png",
+    className: " bg-primary text-white text-xl ",
+    button: "https://wokwi.com/projects/400327839208975361",
+  },
+  {
     title: " More Coming Soon",
     src: "/assets/Rocket.svg",
-    className: " bg-primary text-white text-xl",
+    className: " bg-primary text-white ",
   },
 ];
 
@@ -69,7 +76,7 @@ const Card = ({ title, description, src, video, button }) => {
     }
   };
 
-  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  // const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
   return (
     <div
@@ -173,10 +180,10 @@ export const ProjectPage = () => {
             Projects
           </h1>
           <p className=" font-circular-web text-lg text-text-light text-center w-full">
-            Here are some of my Projects i have worked on.
+            Here are just some of my Projects i have worked on.
           </p>
         </div>
-        <div className="grid h-[135vh] grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 gap-7">
+        <div className="grid h-[135vh] grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 gap-7">
           {/* Map Cards */}
           {cardItems.map((items, id) => (
             <CardTilt

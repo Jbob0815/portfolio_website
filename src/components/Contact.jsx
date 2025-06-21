@@ -65,6 +65,7 @@ export const Contact = () => {
                   Name
                 </label>
                 <input
+                  disabled
                   type="text"
                   id="name"
                   autoComplete="name"
@@ -81,6 +82,7 @@ export const Contact = () => {
                   Email
                 </label>
                 <input
+                  disabled
                   type="email"
                   id="email"
                   autoComplete="email"
@@ -97,6 +99,7 @@ export const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  disabled
                   id="message"
                   autoComplete="off"
                   rows="4"
@@ -110,7 +113,7 @@ export const Contact = () => {
                 disabled
                 className="w-full bg-primary text-white py-2 rounded-md hover:bg-secondary transition-colors duration-300"
               >
-                Still workimg on it...
+                Still working on it...
               </button>
             </form>
           </div>
