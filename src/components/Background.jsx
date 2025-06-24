@@ -56,7 +56,7 @@ export const Background = () => {
   }, []);
 
   return (
-    <div className="fixed inset overflow-hidden pointer-events-none w-full h-full z-[-1]">
+    <div className="bg-black fixed inset overflow-hidden pointer-events-none w-full h-full z-[-1]">
       <canvas ref={canvasRef} className="w-full h-full"></canvas>
     </div>
   );

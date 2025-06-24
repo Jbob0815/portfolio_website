@@ -175,11 +175,11 @@ export const ProjectPage = () => {
             Here are just some of my Projects i have worked on.
           </p>
         </div>
-        <div className="grid h-[135vh] grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 gap-7">
+        <div className="grid min-h-[135vh] grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 gap-7">
           {/* Map Cards */}
           {cardItems.map((items, id) => (
             <CardTilt
-              className={` ${items.className} bg-primary size-full relative border-hsla col-span-1 overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-color `}
+              className={` ${items.className} bg-primary min-h-[250px] size-full relative border-hsla col-span-1 overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-color `}
               key={id}
             >
               <Card

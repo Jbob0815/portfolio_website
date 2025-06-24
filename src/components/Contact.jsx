@@ -41,7 +41,9 @@ export const Contact = () => {
               <div key={index} className="flex items-center mb-4">
                 <div className="text-primary mr-3">{item.icon}</div>
                 <div>
-                  <p className="text-sm text-text-light ">{item.content}</p>
+                  <p className="text-sm text-text-light overflow-hidden ">
+                    {item.content}
+                  </p>
                 </div>
               </div>
             ))}

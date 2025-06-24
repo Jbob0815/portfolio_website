@@ -33,7 +33,7 @@ export const About = () => {
 
   return (
     <section
-      className="bg-background  w-full container flex justify-center items-center my-30"
+      className="bg-background  w-full container mb-0 flex justify-center items-center my-30"
       id="about"
     >
       <div className="w-full my-auto h-full max-w-[1600px] relative flex flex-col-reverse md:flex-row items-center px-5 max-md:px-0 justify-center">
