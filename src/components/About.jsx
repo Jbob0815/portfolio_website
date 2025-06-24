@@ -36,8 +36,8 @@ export const About = () => {
       className="bg-background  w-full container flex justify-center items-center my-30"
       id="about"
     >
-      <div className="w-full my-auto h-full max-w-[1600px] relative flex flex-col-reverse md:flex-row items-center px-5 justify-center">
-        <div className="w-full h-full flex flex-col-reverse md:flex-row justify-center gap-5 px-5 md:px-10">
+      <div className="w-full my-auto h-full max-w-[1600px] relative flex flex-col-reverse md:flex-row items-center px-5 max-md:px-0 justify-center">
+        <div className="w-full h-full flex flex-col-reverse md:flex-row justify-center gap-5 px-5 max-md:px-0 md:px-10">
           <div className="text-left w-full gap-2 justify-center items-start  rounded-lg backdrop-blur-md light:shadow-none  p-6 ">
             <h1 className="mb-3">
               <span className="animation-appear text-primary font-circular-web font-extrabold text-5xl">
