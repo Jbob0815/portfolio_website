@@ -53,36 +53,28 @@ const cardItems = [
 
 const Card = ({ title, description, src, video, button }) => {
   const videoRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
 
-  // Play video on mouse enter
   const handleMouseEnter = () => {
+    setIsHovered(true);
     if (videoRef.current) {
       videoRef.current.play();
     }
   };
 
-  // Reverse video on mouse leave
   const handleMouseLeave = () => {
+    setIsHovered(false);
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
   };
 
-  // Open href in new tab if present
-  const handleClick = () => {
-    if (href) {
-      window.open(href, "_blank");
-    }
-  };
-
-  // const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
   return (
     <div
-      className={`relative size-full border-border`}
-      onMouseEnter={video ? handleMouseEnter : undefined}
-      onMouseLeave={video ? handleMouseLeave : undefined}
+      className="relative size-full border-border"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {video ? (
         <video
@@ -91,16 +83,16 @@ const Card = ({ title, description, src, video, button }) => {
           muted
           src={src}
           alt="video"
-          className="absolute left-0 top-0 size-full object-cover object-center"
-          playsInline // prevents iOS fullscreen on play
-          disablePictureInPicture // disables PiP on supported browsers
-          controls={false} // explicitly disables controls
+          className={`absolute left-0 top-0 size-full object-cover object-center transition-all duration-300 ${!isHovered ? "md:blur-md" : ""}`}
+          playsInline
+          disablePictureInPicture
+          controls={false}
         />
       ) : (
         <img
           src={src}
           alt="image"
-          className="absolute left-0 top-0 size-full object-cover object-center"
+          className={`absolute left-0 top-0 size-full object-cover object-center transition-all duration-300 ${!isHovered ? "md:blur-md" : ""}`}
         />
       )}
 
@@ -187,7 +179,7 @@ export const ProjectPage = () => {
           {/* Map Cards */}
           {cardItems.map((items, id) => (
             <CardTilt
-              className={` ${items.className} size-full relative border-hsla col-span-1 overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-color `}
+              className={` ${items.className} bg-primary size-full relative border-hsla col-span-1 overflow-hidden rounded-lg border-2 border-border hover:border-primary transition-color `}
               key={id}
             >
               <Card

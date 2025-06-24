@@ -5,6 +5,7 @@ import { ProjectPage } from "../components/ProjectPage";
 import { Footer } from "../components/Footer";
 import { About } from "../components/About";
 import { Contact } from "../components/Contact";
+import { Background } from "../components/Background";
 
 export const Home = () => {
   return (
@@ -13,19 +14,16 @@ export const Home = () => {
       <ThemeToggle />
 
       {/*Background*/}
-
+      <Background />
       {/*NavBar*/}
       <NavBar />
-
       {/*Main Content*/}
-
       <main>
         <HeroSection />
         <About />
         <ProjectPage />
         <Contact />
       </main>
-
       {/*Footer*/}
       <Footer />
     </div>

@@ -2,14 +2,14 @@
 
 @theme {
   --color-border: hsl(var(--border));
-  --color-background: hsl(var(--background));
+  --color-background: hsla(var(--background));
   --color-foreground: hsl(var(--foreground));
 
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-secondary: hsl(var(--secondary));
 
-  --color-card: hsl(var(--card));
+  --color-card: hsla(var(--card));
   --color-text: hsl(var(--text));
   --color-text-light: hsl(var(--text-light));
   --animate-float: float 6 ease-in-out infinite;
@@ -36,24 +36,29 @@
     src: url(./fonts/zentry-regular.woff2) format("woff2");
   }
 
+  @font-face {
+    font-family: "matrix";
+    src: url(./fonts/matrix.ttf) format("truetype");
+  }
+
   :root {
     --primary: 47, 100%, 50%;
     --secondary: 207, 82%, 98%;
-    --background: 210 90% 98%;
+    --background: 210, 90%, 98%, 1;
     --text: 211, 29%, 25%;
     --text-light: 211, 15%, 43%;
     --border: 210 20% 95%;
-    --card: 0 0% 100%;
+    --card: 60, 3%, 99%, 1;
   }
 
   .dark {
-    --background: 210 20% 10%;
+    --background: 210 20% 10% 0;
     --text: 210 20% 90%;
     --text-light: 211, 15%, 55%;
     --primary: 249, 66%, 62%;
     --secondary: 247, 100%, 96%;
     --border: 210 20% 30%;
-    --card: 210 20% 13%;
+    --card: 210 20% 13% 0.1;
   }
 
   /* * {
@@ -71,7 +76,10 @@
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: "rlig" 1, "clig" 1, "calt" 1;
+    font-feature-settings:
+      "rlig" 1,
+      "clig" 1,
+      "calt" 1;
   }
 }
 
@@ -160,7 +168,9 @@
 
 @utility text-glow {
   @apply relative;
-  text-shadow: 0 0 5px hsl(var(--foreground)), 0 0 10px hsl(var(--foreground));
+  text-shadow:
+    0 0 5px hsl(var(--foreground)),
+    0 0 10px hsl(var(--foreground));
 }
 
 @utility card-hover {

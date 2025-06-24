@@ -59,7 +59,7 @@ export const NavBar = () => {
           {/*Mobile */}
 
           <button
-            className="md:hidden p2 z-50"
+            className="md:hidden text-red dark:text-white p2 z-50"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu />}

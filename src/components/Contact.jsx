@@ -35,7 +35,7 @@ export const Contact = () => {
           </p>
         </div>
         <div className="flex flex-col lg:flex-row gap-5">
-          <div className="h-auto shadow-lg p-6 px-8 bg-card rounded-lg w-[min(90vw,30rem)] ">
+          <div className="h-auto shadow-lg p-6 px-8 bg-card backdrop-blur-md rounded-lg w-[min(90vw,30rem)] ">
             <h2 className="text-2xl text-text font-bold mb-6 mt-1">My Info</h2>
             {info.map((item, index) => (
               <div key={index} className="flex items-center mb-4">
@@ -54,7 +54,7 @@ export const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="bg-card shadow-lg rounded-lg p-6 h-auto w-[min(90vw,30rem)]">
+          <div className="bg-card backdrop-blur-md  shadow-lg rounded-lg p-6 h-auto w-[min(90vw,30rem)]">
             <h2 className="text-2xl text-text font-bold mb-4">Get in Touch</h2>
             <form className="text-left">
               <div className="mb-4">
