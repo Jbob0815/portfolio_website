@@ -18,27 +18,27 @@
 @layer base {
   @font-face {
     font-family: "circular-web";
-    src: url(assets/fonts/circularweb-book.woff2) format("woff2");
+    src: url(/assets/fonts/circularweb-book.woff2) format("woff2");
   }
 
   @font-face {
     font-family: "general";
-    src: url(assets/fonts/general.woff2) format("woff2");
+    src: url(/assets/fonts/general.woff2) format("woff2");
   }
 
   @font-face {
     font-family: "robert-regular";
-    src: url(assets/fonts/robert-regular.woff2) format("woff2");
+    src: url(/assets/fonts/robert-regular.woff2) format("woff2");
   }
 
   @font-face {
     font-family: "zentry-regular";
-    src: url(assets/fonts/zentry-regular.woff2) format("woff2");
+    src: url(/assets/fonts/zentry-regular.woff2) format("woff2");
   }
 
   @font-face {
     font-family: "matrix";
-    src: url(assets/fonts/matrix.ttf) format("truetype");
+    src: url(/assets/fonts/matrix.ttf) format("truetype");
   }
 
   :root {
