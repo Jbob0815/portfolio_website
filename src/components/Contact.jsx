@@ -1,5 +1,12 @@
 import React from "react";
-import { Mail, Map, Phone, CircleUserRound } from "lucide-react";
+import {
+  Mail,
+  Map,
+  Phone,
+  CircleUserRound,
+  Linkedin,
+  Github,
+} from "lucide-react";
 
 import { Resend } from "resend";
 
@@ -16,6 +23,32 @@ const info = [
   { content: "Jakob Nieß", icon: <CircleUserRound /> },
   { content: "+49 176 42012290 ", icon: <Phone /> },
   { content: "jakob.niess2704@gmail.com", icon: <Mail /> },
+  {
+    content: (
+      <a
+        href="https://www.linkedin.com/in/jakob-nie%C3%9F-831756371/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary hover:text-white transition-colors duration-300"
+      >
+        LinkedIn
+      </a>
+    ),
+    icon: <Linkedin />,
+  },
+  {
+    content: (
+      <a
+        href="https://github.com/Jbob0815"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary hover:text-white transition-colors duration-300"
+      >
+        Github
+      </a>
+    ),
+    icon: <Github />,
+  },
   { content: "Schleswig-Holstein, Germany", icon: <Map /> },
 ];
 export const Contact = () => {
@@ -36,10 +69,10 @@ export const Contact = () => {
         </div>
         <div className="flex flex-col lg:flex-row gap-5">
           <div className="h-auto shadow-lg p-6 px-8 bg-card backdrop-blur-md rounded-lg w-[min(90vw,30rem)] ">
-            <h2 className="text-2xl text-text font-bold mb-6 mt-1">My Info</h2>
+            <h2 className="text-2xl text-text font-bold mb-4 mt-1">My Info</h2>
             {info.map((item, index) => (
               <div key={index} className="flex items-center mb-4">
-                <div className="text-primary mr-3">{item.icon}</div>
+                <div className="text-primary mr-4">{item.icon}</div>
                 <div>
                   <p className="text-sm text-text-light overflow-hidden ">
                     {item.content}
@@ -104,7 +137,7 @@ export const Contact = () => {
                   disabled
                   id="message"
                   autoComplete="off"
-                  rows="4"
+                  rows="5"
                   className="w-full text-text px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Your Message..."
                   required
