@@ -2,10 +2,11 @@
 import React from "react";
 import { useRef, useState, useCallback } from "react";
 import { FaReact, FaJsSquare } from "react-icons/fa";
-import { SiKicad } from "react-icons/si";
+import { SiKicad, SiAutodesk } from "react-icons/si";
 import { DiRasberryPi } from "react-icons/di";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoBlender } from "react-icons/bi";
+
 export const About = () => {
   const items = [
     { Icon: FaReact, Color: "#55bed5" },
@@ -14,6 +15,7 @@ export const About = () => {
     { Icon: SiKicad, Color: "#3752b2" },
     { Icon: DiRasberryPi, Color: "#be1848" },
     { Icon: BiLogoBlender, Color: "#ff7428" },
+    { Icon: SiAutodesk, Color: "#fb6a00" },
   ];
 
   const AboutSection = [

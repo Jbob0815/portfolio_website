@@ -15,20 +15,20 @@ const cardItems = [
     description: "Updated GameCube Controller Mod to USB-C",
     src: "/assets/GameCubeAnimation.mov",
     video: true,
-    className: "md:col-span-2 lg:row-span-2 text-white",
+    className: "lg:col-span-2 lg:row-span-2 text-white",
   },
   {
     title: "clean-eck.de",
     description: "Basic Website for a cleaning company",
     src: "/assets/CleanEck.png",
-    className: " lg:row-span-2 ",
+    className: " md:row-span-2 ",
     button: "https://clean-eck.de",
   },
   {
     title: "Photogrametry Projects",
     description: "Scanned Some Objects via Photogrametry",
     src: "/assets/BaumStamm.png",
-    className: " md:row-span-2  text-white",
+    className: "  text-white",
   },
   {
     title: "First Game at 14",
@@ -42,6 +42,13 @@ const cardItems = [
     description: "A Battleship Game with Arduino in Wokwi",
     src: "assets/wokwi-project.png",
     className: " bg-primary text-white text-xl ",
+    button: "https://wokwi.com/projects/400327839208975361",
+  },
+  {
+    title: " Lightwheight Mouse",
+    description: "Ultra Lightwheight Mouse with 3D Printing",
+    src: "/assets/render1.png",
+    className: " bg-primary text-grey-200 text-xl",
     button: "https://wokwi.com/projects/400327839208975361",
   },
   {
@@ -175,7 +182,7 @@ export const ProjectPage = () => {
             Here are just some of my Projects i have worked on.
           </p>
         </div>
-        <div className="grid min-h-[135vh] grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 gap-7">
+        <div className="grid min-h-[135vh] grid-cols-1 grid-rows-7 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 gap-7">
           {/* Map Cards */}
           {cardItems.map((items, id) => (
             <CardTilt
